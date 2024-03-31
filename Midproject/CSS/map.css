@@ -1,0 +1,220 @@
+/* 地圖背景 */
+body {
+  background-image: url(../IMG/map.jpg);
+  background-attachment: fixed;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+audio{
+  display: none;
+}
+
+/* 讓按鈕彈跳 */
+@keyframes bounce {
+  from {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(-10px)
+  }
+}
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px)
+  }
+
+  to {
+    transform: translateY(-10px)
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate;
+}
+
+/* 社群 icons 造型、滑鼠滑過設定 */
+.fa {
+  padding: 5px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* 社群 icons 客製化 */
+
+/* Facebook */
+.fa-facebook {
+  background: #5b3701;
+  color: white;
+}
+
+/* youtube */
+.fa-youtube {
+  background: #734a0b;
+  color: white;
+}
+
+/* instagram */
+.fa-instagram {
+  background: #8e5807;
+  color: white;
+}
+
+/* 各區域按鈕造型設定 */
+/* stair */
+#stair {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(96, 94, 94);
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+
+}
+
+#stair:hover {
+  background-color: rgb(148, 137, 137);
+}
+
+
+/* foothills*/
+
+.notification {
+  background-color: rgb(9, 54, 16);
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 10px;
+
+  position: absolute;
+  top: 65px;
+  right: 65px;
+  border-radius: 30px;
+}
+
+.notification:hover {
+  background: rgb(26, 87, 14);
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 10px;
+  padding: 10px 10px;
+  border-radius: 20%;
+  background: rgba(0, 0, 0, 0.345);
+  color: white;
+}
+
+/* pavilion */
+.notification2 {
+  background-color: rgb(112, 4, 90);
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 10px;
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  border-radius: 30px;
+}
+
+.notification2:hover {
+  background: rgb(134, 1, 183);
+}
+
+.notification2 .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 10px;
+  padding: 10px 10px;
+  border-radius: 20%;
+  background: rgba(0, 0, 0, 0.345);
+  color: white;
+}
+
+
+/* shrine */
+
+#shrine {
+  position: absolute;
+  top: 80%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(109, 39, 39);
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+
+}
+
+#shrine:hover {
+  background-color: rgb(226, 52, 52);
+}
+
+/* sand */
+#sand {
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(118, 83, 0);
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+
+}
+
+#sand:hover {
+  background-color: rgb(180, 129, 0);
+}
+
+/* coast */
+#coast {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(0, 89, 130);
+  color: white;
+  font-size: 20px;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+
+}
+
+#coast:hover {
+  background-color: rgb(0, 136, 178);
+}

@@ -1,0 +1,377 @@
+/* 背景主幹設定 */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+  background-color: gainsboro;
+  background-image: url(../IMG/writing.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}
+.home {
+  background: #6b593d;
+  padding: 5px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  position: absolute;
+  top: 94%;
+  left: 94%;
+}
+/* 主題按鈕風格、滑鼠滑過效果設定 */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+
+}
+
+/* 各主題背景色設定 */
+#Poems {
+  background-color: grey;
+}
+
+#Proses {
+  background-color: rgb(147, 131, 131);
+}
+
+#Novels {
+  background-color: rgb(175, 160, 141);
+}
+
+#Comics {
+  background-color: rgb(124, 138, 154);
+}
+
+/* 詩區塊 - 四張詩作卡片設定 */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+/* 卡片之一 */
+#doomsday {
+  height: 350px;
+  flex: 0 0 22%;
+  min-width: 22%;
+  margin-right: calc(9.99% / 4);
+  margin-bottom: calc(9.99% / 4);
+}
+
+#ice {
+  object-fit: cover;
+}
+
+/* 卡片之二 */
+#summer {
+  height: 350px;
+  flex: 0 0 22%;
+  min-width: 22%;
+  margin-right: calc(9.99% / 4);
+  margin-bottom: calc(9.99% / 4);
+}
+
+#sea {
+  object-fit: cover;
+}
+
+/* 卡片之三 */
+#noname {
+  height: 350px;
+  flex: 0 0 22%;
+  min-width: 22%;
+  margin-right: calc(9.99% / 4);
+  margin-bottom: calc(9.99% / 4);
+}
+
+#cat {
+  object-fit: cover;
+}
+
+/* 卡片之四 */
+#jetlag {
+  height: 350px;
+  flex: 0 0 22%;
+  min-width: 22%;
+  margin-right: calc(9.99% / 4);
+  margin-bottom: calc(9.99% / 4);
+
+/* 排列最後一張卡片需加入以下公式 */
+
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+#dog {
+  object-fit: cover;
+}
+
+/* 四張卡片翻動效果 */
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 150px;
+  border: 1px solid grey;
+  perspective: 1000px;
+
+}
+
+/* 卡片背面風格設定 */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.flip-card-back {
+  background-color: gainsboro;
+  color: rgb(86, 79, 79);
+  transform: rotateY(180deg);
+}
+
+/*水平翻動效果設定 */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* 卡片位置設定 */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* 卡片前面風格設定 */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* 散文區塊 - 貓咪圖片輪播設定 */
+/* 照片區塊大小、位置設定 */
+.coverflow {
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 70%;
+}
+
+.coverflow>a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+/*當圖片數量增加，影片長度需更改，變為5s*圖片數量*/
+  -webkit-animation: silder 15s linear infinite;
+  animation: silder 15s linear infinite;
+}
+
+.coverflow>a>img {
+  max-width: 100%;
+}
+
+/*動畫關鍵影格*/
+@-webkit-keyframes silder {
+  3% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  27% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  30% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+@keyframes silder {
+  3% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  27% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  30% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+
+/*每個圖片各延遲5秒*/
+.coverflow>a:nth-child(3) {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+.coverflow>a:nth-child(2) {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.coverflow>a:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+/*滑鼠滑入時停止播放*/
+.coverflow:hover>a {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.coverflow {
+  position: absolute;
+  left:60%
+}
+
+
+.contentflow {
+  position: absolute;
+  left:50%
+}
+
+/* 小說分頁風格設定 */
+.moutablink {
+  background-color: rgb(190, 172, 148);
+  color: rgb(250, 242, 242);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+.moutablink:hover {
+  background-color: #777;
+}
+.moutabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#mountain {
+  background-color: rgb(175, 160, 141);
+}
+
+#rain {
+  background-color: rgb(175, 160, 141);
+}
+
+/* 漫畫頁籤 */
+.comicbody {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.comiccontainer {
+  max-width: 1000px;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.comiccard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  background: #fff;
+  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+}
+
+.comiccard:hover {
+  transform: perspective(2000px);
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.comiccard .imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #000;
+  transform-origin: left;
+  z-index: 1;
+  transition: 2s;
+}
+
+.comiccard:hover .imgBox {
+  transform: rotateY(-160deg);
+}
+
+.comiccard .comiccontents {
+  position: absolute;
+  top: -7.5%;
+  left: -10%;
+  padding: 30px;
+}
+
+.comicbtn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.comicbtn:hover {
+  cursor: pointer;
+  opacity: 1
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/fe876fcce4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/creation.css">
+
+</head>
+
+<body>
+    <!-- 繪圖板主區 -->
+    <canvas id="canvas" class="cursor1" width="500" height="500"></canvas>
+    <!-- 工具列設定 -->
+    <!-- <div id="actions" class="actions"> -->
+        <div id="actions" class="actions">
+            <!-- <svg id="brush" class="icon active"> -->
+                <!-- <use xlink:href="#icon-pencil"></use> -->
+                <img src="../ICO/black.ico" alt="Eraser Icon" id="brush" class="icon active">
+            <!-- </svg> -->
+            <!-- <svg id="eraser" class="icon"> -->
+                <!-- <use xlink:href="#icon-xiangpica"></use> -->
+                <img src="../ICO/eraser.ico" alt="Eraser Icon" id="eraser" class="icon">
+            <!-- </svg> -->
+            <!-- <svg id="save" class="icon"> -->
+                <!-- <use xlink:href="#icon-xiazai"></use> -->
+                <img src="../ICO/download.ico" alt="download Icon" id="save" class="icon">
+            <!-- </svg> -->
+            <!-- <svg id="clear" class="icon"> -->
+                <!-- <use xlink:href="#icon-delete"></use> -->
+                <img src="../ICO/black.ico" alt="Eraser Icon" id="clear" class="icon">
+            <!-- </svg> -->
+        </div>
+        <!-- 顏色選取圖示 -->
+        <ol class="colors">
+            <li id="black" class="black"></li>
+            <li id="red" class="red"></li>
+            <li id="orange" class="orange"></li>
+            <li id="green" class="green"></li>
+            <li id="blue" class="blue"></li>
+        </ol>
+        <!-- 首頁圖示設定 -->
+        <div class="home">
+            <a href="../HTML/map.html">
+                <i class="fa-sharp fa-solid fa-house" style="color:white;"></i>
+            </a>
+        </div>
+        <script src="../JavaScript/creation.js"></script>
+    <!-- </div> -->
+</body>
+
+</html>

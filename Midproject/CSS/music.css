@@ -1,0 +1,289 @@
+.home {
+    background: #78b3e3;
+    padding: 5px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 3%;
+    left: 94%;
+  }
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+h1 {
+	font-weight: 500;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+/* 背景板 */
+.background {
+	width: 100vw;
+	height: 100vh;
+	background-color: #fff;
+    
+}
+
+/* 歌词封面背景 */
+.music-background {
+	width: 1000px;
+	height: calc(100vh - 200px);
+	margin: 0 auto;
+	overflow: hidden;
+   
+    
+}
+
+/* 封面背景 */
+.img-back {
+	width: 300px;
+	padding: 0 50px;
+	margin-top: 150px;
+	margin-right: 50px;
+	overflow: hidden;
+	float: left;
+   
+}
+
+.img-back img {
+	width: 300px;
+	height: 300px;
+	border-radius: 20px;
+}
+
+/* 歌词背景 */
+.lyrics-back {
+	width: 550px;
+	height: 100%;
+	overflow: hidden;
+	float: left;
+    text-align: center;
+    
+}
+
+/* 歌曲訊息 */
+.div-title {
+	width: 100%;
+	height: 100px;
+	margin-top: 150px;
+}
+
+.div-title h1 {
+	width: 100%;
+	height: 50px;
+}
+
+.div-title p {
+	height: 50px;
+	display: inline-block;
+	color: #022f77;
+}
+
+.div-title span {
+	color: #7e95ba;
+}
+
+.div-lyrics {
+	height: calc(100vh - 450px);
+	overflow: hidden;
+	position: relative;
+}
+
+.div-lyrics p {
+	font-size: 15px;
+	line-height: 34px;
+}
+
+/* 歌詞進度 */
+.lyrics-time {
+	width: 650px;
+	height: 34px;
+	margin-top: 136px;
+	margin-left: -50px;
+	position: absolute;
+	display: none;
+}
+
+.lyrics-time a {
+	display: inline-block;
+	position: absolute;
+	display: none;
+}
+
+.goto {
+	width: 20px;
+	height: 20px;
+	margin: 7px 15px;
+	background: url(../IMG/play.png) no-repeat;
+	background-position: 50% 50%;
+	background-size: 20px;
+}
+
+.goto-time {
+	width: 50px;
+	height: 34px;
+	margin-left: 550px;
+	font-size: 13px;
+	line-height: 34px;
+	text-align: center;
+	position: absolute;
+	color: #a54704;
+}
+
+/* 控制背景 */
+.control-back {
+	width: 100vw;
+	height: 80px;
+	bottom: 0;
+	position: absolute;
+	background-color: white;
+}
+
+/* 進度條 */
+.progress-bar {
+	width: calc(100vw - 100px);
+	margin: 5px 0;
+	padding: 5px 0;
+	cursor: pointer;
+	float: left;
+}
+
+/* 目前撥放進度 */
+.progress-now {
+	width: 0;
+	height: 5px;
+	margin-top: 0px;
+	background-color: #022f77;
+}
+
+/* 總撥放進度 */
+.progress-all {
+	width: 100%;
+	height: 5px;
+	background-color: rgba(77, 131, 213, 0.8);
+}
+
+/* 播放進度 時間 */
+.time {
+	display: inline-block;
+	width: 90px;
+	height: 21px;
+	margin-left: 5px;
+	text-align: center;
+	color: rgba(77, 131, 213, 0.8);
+	cursor: default;
+	overflow: hidden;
+}
+
+/* 控制按鈕 */
+.control {
+	width: 100%;
+	height: 30px;
+	margin-top: 19px;
+}
+
+.control a {
+	margin: 0 5px;
+	display: inline-block;
+}
+
+.control a:hover {
+	opacity: 50%;
+}
+
+.control-btn {
+	width: 130px;
+	height: 30px;
+	margin: 0 auto;
+}
+
+/* 上一首 */
+.up {
+	width: 30px;
+	height: 30px;
+	background: url(../IMG/up.png) no-repeat;
+	background-size: 20px;
+	background-position: 50% 50%;
+}
+
+/* 暫停播放 */
+.play-pause {
+	width: 30px;
+	height: 30px;
+	background: url(../IMG/play.png) no-repeat;
+	background-size: 30px;
+	background-position: 50% 50%;
+}
+
+/* 下一首 */
+.down {
+	width: 30px;
+	height: 30px;
+	background: url(../IMG/down.png) no-repeat;
+	background-size: 20px;
+	background-position: 50% 50%;
+}
+
+/* 右邊控制按钮 */
+.control-right {
+	/* width: 180px; */
+	height: 30px;
+	margin-left: calc(50vw + 150px);
+	margin-top: -30px;
+	display: flex;
+	align-items: center;
+}
+
+/* 播放模式 */
+.mode {
+	width: 30px;
+	height: 30px;
+	background: url(../IMG/set.png) no-repeat;
+	background-size: 20px;
+	background-position: left 50%;
+	cursor: pointer;
+}
+
+/* 音量控制 */
+.volume {
+	width: 30px;
+	height: 30px;
+	background: url(../IMG/volume.png) no-repeat;
+	background-size: 20px;
+	background-position: left 50%;
+	cursor: pointer;
+}
+
+.volume-back {
+	padding: 5px 0;
+	cursor: pointer;
+}
+
+.volume-all {
+	width: 100px;
+	height: 2px;
+	background-color: #e5e5e5;
+}
+
+.volume-now {
+	width: 100px;
+	height: 2px;
+	margin-top: -2px;
+	max-width: 100px;
+	background-color:#022f77;
+}
+
+.volume-text {
+	margin-left: 10px;
+	font-size: 14px;
+}
